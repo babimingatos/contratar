@@ -2,26 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@100;300;500;700&display=swap');
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f0f0f0;
+}
+
+.containerr {
+  width: 400px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  min-height: 100vh; 
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #006557;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  padding-left: 1%;
+}
+
+.center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navtxt {
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Selecione o dia... */
+.description {
+  font-weight: 400;
+  font-size: 18px;
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+.margin {
+  margin: 5%;
+}
+
+/* INPUTS */
+.input {
+  padding: 15px;
+  color: #6d7478;
+  font-weight: 500;
+  border: 1px solid #b2b7b9;
+  border-radius: 2px;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.date {
+  outline: none;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='3 3 18 18'><path d='M12 15.375 6 9.375 7.4 7.975 12 12.575 16.6 7.975 18 9.375Z'/></svg>") no-repeat right 10px center;
+  appearance: none;
+  background-size: 26px;
+  border-top: none;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+/* BUTTON */
+.divbutton {
+  padding-top: 10%;
+}
+
+.button {
+  background-color: #07689F;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.back {
+  padding-top: 2%;
+  text-align: center;
+  color: #07689F;
+  font-size: 18px;
+  font-weight: 500
+}
+
+/* BOTTOM NAVBAR */
+.bottom-navbar {
+  display: flex;
+  background-color: white;
+  color: #6d7478;
+  font-size: 14px;
+  font-weight: 600;
+  height: 60px;
+  position: absolute;
+  min-width: 400px;
+  bottom: 0;
+}
+
+.nav-item {
+  text-align: center;
+  flex-grow: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
